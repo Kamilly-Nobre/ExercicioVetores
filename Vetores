@@ -1,0 +1,39 @@
+def Calculovetores(A, B):
+    C = []
+    for i in range(len(A)):
+        if A[i] % 2 == 0:
+            C.append(A[i] * B[i])
+        else:
+            C.append(A[i] ** B[i])
+    return C
+
+def inserirVetores():
+    vetor = []
+    for i in range(5):
+        elemento = int(input(f"{i+1}º elemento: "))
+        vetor.append(elemento)
+    return vetor
+    print()
+
+def imprimirVetores(nome, vetor):
+    print()
+    print(f"Vetor {nome}: {vetor}")
+
+def main():
+    print("Insira os elementos do vetor A:")
+    print()
+    A = inserirVetores()
+    
+    print()
+    print("Insira os elementos do vetor B:")
+    print()
+    B = inserirVetores()
+
+    C = Calculovetores(A, B)
+
+    imprimirVetores('A', A)
+    imprimirVetores('B', B)
+    imprimirVetores('C', C)
+
+if __name__ == "__main__":
+    main()
